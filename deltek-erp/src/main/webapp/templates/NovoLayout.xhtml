@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<title>Padaria do Seu Zé</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Poppins" />
+	<style>
+body, h1, h2, h3, h4, h5 {
+	font-family: "Poppins", sans-serif
+}
+
+body {
+	font-size: 16px;
+}
+
+.w3-half img {
+	margin-bottom: -6px;
+	margin-top: 16px;
+	opacity: 0.8;
+	cursor: por
+}
+
+.w3-half img:hover {
+	opacity: 1
+}
+</style>
+</h:head>
+<h:body>
+	<p:growl id="mensagem" />
+	<!-- Sidebar/menu -->
+	<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding"
+		style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
+	<br />
+
+	<a href="javascript:void(0)" onclick="w3_close()"
+		class="w3-button w3-hide-large w3-display-topleft"
+		style="width: 100%; font-size: 22px">Menu</a>
+	<div class="w3-container">
+		<h3 class="w3-padding-64" />
+		<h3 class="w3-padding-64">
+			<b>Padaria do <br /> seu Zé
+			</b>
+		</h3>
+	</div>
+	<div class="w3-bar-block">
+		<h:link outcome="/pages/principal.xhtml" onclick="w3_close()"
+			class="w3-bar-item w3-button w3-hover-white">Inicial</h:link>
+		<h:link outcome="/pages/fabricantes.xhtml" onclick="w3_close()"
+			class="w3-bar-item w3-button w3-hover-white">Fabricantes</h:link>
+		<h:link outcome="/pages/produtos.xhtml" onclick="w3_close()"
+			class="w3-bar-item w3-button w3-hover-white">Produtos</h:link>
+		<h:link outcome="/pages/pessoas.xhtml" onclick="w3_close()"
+			class="w3-bar-item w3-button w3-hover-white">Pessoas</h:link>
+		<h:link outcome="/pages/clientes.xhtml" onclick="w3_close()"
+			class="w3-bar-item w3-button w3-hover-white">Clientes</h:link>
+		<h:link outcome="/pages/funcionarios.xhtml" onclick="w3_close()"
+			class="w3-bar-item w3-button w3-hover-white">Funcionários</h:link>
+		<h:link outcome="/pages/vendas.xhtml" onclick="w3_close()"
+			class="w3-bar-item w3-button w3-hover-white">Vendas</h:link>
+
+	</div>
+	</nav>
+
+	<!-- Top menu on small screens -->
+	<h:head
+		class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+		<a href="javascript:void(0)" class="w3-button w3-red w3-margin-right"
+			onclick="w3_open()">☰</a>
+		<span>Padaria do seu Zé</span>
+	</h:head>
+
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="w3-overlay w3-hide-large" onclick="w3_close()"
+		style="cursor: por" title="close side menu" id="myOverlay"></div>
+
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-main" style="margin-left: 340px; margin-right: 40px">
+
+		<!-- Header -->
+		<div class="w3-container" style="margin-top: 80px" id="showcase">
+			<h1 class="w3-jumbo">
+				<b>Padaria do Seu Zé</b>
+			</h1>
+
+			<div id="conteudo">
+				<ui:insert name="conteudo" />
+			</div>
+
+		</div>
+	</div>
+
+</h:body>
+</html>
